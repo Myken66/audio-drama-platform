@@ -25,9 +25,16 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Featured Hero Section */}
-      <section className="py-20 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Featured Hero Section with Background */}
+      <section className="py-20 px-4 md:px-8 relative" style={{
+        backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663468380137/EFHz6wzVmuBF3BLxiEYRes/hero-background-YbLS4kh8LuLptAoFr9DHVh.webp)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="mb-12">
             <p className="text-accent-gold text-sm font-semibold mb-2 uppercase tracking-wider">
               Featured Series
@@ -46,7 +53,7 @@ export default function HomePage() {
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl aspect-square">
                     {/* Cover Image */}
                     <img
-                      src={series.coverImage}
+                      src="https://d2xsxph8kpxj0f.cloudfront.net/310519663468380137/EFHz6wzVmuBF3BLxiEYRes/book-cover-betrayal-UWSSz3j9hNa3CzFbV6vB33.webp"
                       alt={series.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
